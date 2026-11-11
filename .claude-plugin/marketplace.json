@@ -1,0 +1,18 @@
+{
+  "name": "traspion",
+  "description": "Traspion transcription for Claude.",
+  "owner": {
+    "name": "Traspion",
+    "email": "support@traspion.com",
+    "url": "https://www.traspion.com"
+  },
+  "plugins": [
+    {
+      "name": "traspion",
+      "displayName": "Traspion",
+      "source": "./",
+      "description": "AI transcription and speech-to-text for audio and video, with translation, editing, and export.",
+      "category": "productivity"
+    }
+  ]
+}

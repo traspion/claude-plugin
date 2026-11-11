@@ -1,0 +1,26 @@
+{
+  "name": "traspion",
+  "displayName": "Traspion",
+  "version": "1.0.0",
+  "description": "AI transcription and speech-to-text for audio and video, with translation, editing, and export.",
+  "author": {
+    "name": "Traspion",
+    "email": "support@traspion.com",
+    "url": "https://www.traspion.com"
+  },
+  "homepage": "https://www.traspion.com",
+  "repository": "https://github.com/traspion/claude-plugin",
+  "license": "MIT",
+  "documentationUrl": "https://github.com/traspion/claude-plugin#readme",
+  "supportUrl": "https://traspion.com/contact",
+  "privacyPolicyUrl": "https://traspion.com/privacy",
+  "termsOfServiceUrl": "https://traspion.com/terms",
+  "keywords": [
+    "transcription",
+    "speech-to-text",
+    "audio-to-text",
+    "video-to-text",
+    "transcript",
+    "translation"
+  ]
+}

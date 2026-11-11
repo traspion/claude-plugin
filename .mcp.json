@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "traspion": {
+      "type": "http",
+      "url": "https://mcp.traspion.com/mcp",
+      "oauth": {
+        "clientId": "rcfaniupo367kj8blnlptvhc4",
+        "callbackPort": 8765
+      }
+    }
+  }
+}
