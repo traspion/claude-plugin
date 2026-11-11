@@ -49,3 +49,5 @@ In claude.ai or the Claude desktop app, go to **Customize → Plugins → Add �
 ## License
 
 The plugin files in this repository are released under the [MIT License](LICENSE). The Traspion service itself is proprietary and covered by its [terms of service](https://traspion.com/terms).
+
+"Traspion" and the Traspion logo are trademarks of Traspion. They are not licensed under the MIT License. See [NOTICE](NOTICE).
