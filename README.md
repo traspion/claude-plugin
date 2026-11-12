@@ -4,7 +4,7 @@ Transcribe audio and video with [Traspion](https://www.traspion.com) without lea
 
 ## What you can do
 
-- **Transcribe a recording from a link.** Share a Google Drive, Dropbox, OneDrive or SharePoint link, or a direct https link to an audio or video file. Choose speaker labels, language, translation, PII redaction and profanity filtering.
+- **Transcribe a recording** from your device, using an upload panel right in the chat, or from a Google Drive, Dropbox, OneDrive or SharePoint link, or a direct https link. Choose speaker labels, language, translation, PII redaction and profanity filtering.
 - **Read your transcripts and translations**, with speaker labels and timestamps.
 - **Translate** a transcript, using the stored Traspion translation when you asked for one at upload.
 - **Edit and save** a transcript back to Traspion after you approve the changes.
@@ -28,7 +28,8 @@ In claude.ai or the Claude desktop app, go to **Customize → Plugins → Add �
 
 ## Try asking
 
-- "Transcribe this recording: <Google Drive link>. There are 2 speakers."
+- "Transcribe a recording from my computer. There are 2 speakers."
+- "Transcribe this recording: <Google Drive link>."
 - "Show the transcript of my latest Traspion file."
 - "Translate my latest transcript into Spanish."
 - "Export my interview transcript as a Word document."
@@ -36,7 +37,7 @@ In claude.ai or the Claude desktop app, go to **Customize → Plugins → Add �
 
 ## Good to know
 
-- **Links only.** Claude can't send an attached file to Traspion. Share the file as a link, or upload it at [traspion.com](https://www.traspion.com).
+- **Uploading from your device** works in claude.ai, the Claude desktop app and Cowork: Claude shows an upload panel where you pick the file. Claude Code doesn't show panels, so there, share a link instead.
 - **Your files stay in your account.** Traspion only reads files in the account you sign in with.
 - **Some things stay on the website:** buying minutes, changing your plan, and deleting files. The one exception is a file waiting for minutes, which Claude can delete after you confirm.
 - Claude never saves a translation it made itself to Traspion, and never re-uploads a file on its own.

@@ -1,7 +1,7 @@
 {
   "name": "traspion",
   "displayName": "Traspion",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AI transcription and speech-to-text for audio and video, with translation, editing, and export.",
   "author": {
     "name": "Traspion",
