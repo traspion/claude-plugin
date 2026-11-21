@@ -12,7 +12,8 @@ The Traspion tools were first written for ChatGPT. Where a tool description or r
 - Reuse a `fileId` already returned for the file the user clearly means.
 - Otherwise call `list_files`, using its filename, date, or status filters when the user gave those details. If several files could match, ask the user to choose; don't guess an ID. A request for the latest file may use the most recent matching result.
 - Show files from `list_files` as a Markdown table with row number, filename, upload time, and status, in the returned order. Use the row number to resolve a follow-up choice. Don't show internal IDs or a pagination cursor unless the next page needs it.
-- Call `get_transcription` for every request to see a transcript, including when the user switches to another file later.
+- To show or open a transcript, or to edit it without saying what to change, call only `open_transcript`: it shows Traspion's panel for that file with View transcript, Edit, and Export. Don't fetch the text first, and reply with one short sentence pointing to the panel. Do the same when the user switches to another file later.
+- Call `get_transcription` when the text itself is needed: to read, quote, summarize, or translate it, to make a change the user describes, or to check a file's status.
 
 ## Read and translate
 
@@ -28,7 +29,7 @@ The Traspion tools were first written for ChatGPT. Where a tool description or r
 ## Edit and save
 
 - Retrieve the current stored content and its revision before editing. Edits stay in the conversation until the user explicitly approves saving the complete revised content to Traspion.
-- Show the proposed content, and call `save_content` only after the user approves saving it. Pass the revision returned by `get_transcription` or `get_translation`. If the content changed since it was read, ask the user to reopen and review it instead of overwriting.
+- Show the proposed content, and call `save_content` only after the user approves saving it. Pass the revision returned by `get_transcription` or `get_translation`. For a transcript, set `type` to the `editType` that `get_transcription` returned (`speaker-labelling` when the text is the saved speaker version). If the content changed since it was read, ask the user to reopen and review it instead of overwriting.
 - Keep the resolved `fileId` and pick the content type that matches what is being saved.
 - Never overwrite stored content with a partial or paginated fragment.
 - Call `save_content` once. If it fails, report the error; don't claim the edit was saved.
@@ -36,7 +37,8 @@ The Traspion tools were first written for ChatGPT. Where a tool description or r
 ## Rename and export
 
 - Use `rename_file` only when the file and the new name are clear.
-- For export, settle the format (`pdf`, `txt`, `docx`, or `json`) and whether the user wants the transcription, stored translation, speaker-labelled transcript, or channel-identified transcript. Ask when either is unclear.
+- For export, settle the format (`pdf`, `txt`, `docx`, `json`, or the subtitle formats `srt` and `vtt`) and whether the user wants the transcription, stored translation, speaker-labelled transcript, or channel-identified transcript. Ask when either is unclear.
+- Export `srt` or `vtt` (with `type: transcription`) only when subtitles were requested for that file; otherwise say they weren't made for it.
 - Use `type: speaker-labelling` only when the file was transcribed with speaker labels, and `type: channel-identification` only when channel identification was on. If the requested output wasn't enabled, say it's unavailable instead of exporting something else.
 - Copy the exact Markdown download link returned by `export_transcript` and say that the link is temporary. Never rewrite, shorten, or omit it.
 

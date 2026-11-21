@@ -5,9 +5,10 @@ Transcribe audio and video with [Traspion](https://www.traspion.com) without lea
 ## What you can do
 
 - **Transcribe a recording** from your device, using an upload panel right in the chat, or from a Google Drive, Dropbox, OneDrive or SharePoint link, or a direct https link. Choose speaker labels, language, translation, PII redaction and profanity filtering.
-- **Read your transcripts and translations**, with speaker labels and timestamps.
+- **View and edit transcripts in a panel.** Ask to see or edit a transcript and Claude opens Traspion's panel for that file: View transcript (read-only, with speaker labels and timestamps), Edit (change the text, save it to Traspion, or reset it to the original) and Export.
+- **Read your transcripts and translations** in the conversation, with speaker labels and timestamps, when you want Claude to work with the text.
 - **Translate** a transcript, using the stored Traspion translation when you asked for one at upload.
-- **Edit and save** a transcript back to Traspion after you approve the changes.
+- **Ask for a specific change** ("rename Speaker 0 to Ravi") and Claude edits the transcript and saves it to Traspion after you approve. Every save keeps the version it replaces.
 - **Rename and export** files as PDF, TXT, DOCX or JSON.
 - **Check your account:** plan, minutes left, billing history, custom vocabulary and spelling replacements.
 
@@ -30,7 +31,8 @@ In claude.ai or the Claude desktop app, go to **Customize → Plugins → Add �
 
 - "Transcribe a recording from my computer. There are 2 speakers."
 - "Transcribe this recording: <Google Drive link>."
-- "Show the transcript of my latest Traspion file."
+- "Show the transcript of my latest Traspion file." (opens the panel)
+- "I want to edit my interview transcript."
 - "Translate my latest transcript into Spanish."
 - "Export my interview transcript as a Word document."
 - "How many Traspion minutes do I have left?"
@@ -38,6 +40,7 @@ In claude.ai or the Claude desktop app, go to **Customize → Plugins → Add �
 ## Good to know
 
 - **Uploading from your device** works in claude.ai, the Claude desktop app and Cowork: Claude shows an upload panel where you pick the file. Claude Code doesn't show panels, so there, share a link instead.
+- **Each panel remembers its file.** Reload the page and every panel shows its own file's progress or finished transcript again.
 - **Your files stay in your account.** Traspion only reads files in the account you sign in with.
 - **Some things stay on the website:** buying minutes, changing your plan, and deleting files. The one exception is a file waiting for minutes, which Claude can delete after you confirm.
 - Claude never saves a translation it made itself to Traspion, and never re-uploads a file on its own.
