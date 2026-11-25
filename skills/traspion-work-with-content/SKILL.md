@@ -10,7 +10,7 @@ The Traspion tools were first written for ChatGPT. Where a tool description or r
 ## Find the file
 
 - Reuse a `fileId` already returned for the file the user clearly means.
-- Otherwise call `list_files`, using its filename, date, or status filters when the user gave those details. If several files could match, ask the user to choose; don't guess an ID. A request for the latest file may use the most recent matching result.
+- Otherwise call `list_files`, using its filename, date, or status filters when the user gave those details. If several files could match, ask the user to choose; don't guess an ID. Files with the same name are several matches: list each one's upload date and status and ask which one, unless the conversation already shows which file the user means (for example the file in the upload panel). A request for the latest file may use the most recent matching result.
 - Show files from `list_files` as a Markdown table with row number, filename, upload time, and status, in the returned order. Use the row number to resolve a follow-up choice. Don't show internal IDs or a pagination cursor unless the next page needs it.
 - To show or open a transcript, or to edit it without saying what to change, call only `open_transcript`: it shows Traspion's panel for that file with View transcript, Edit, and Export. Don't fetch the text first, and reply with one short sentence pointing to the panel. Do the same when the user switches to another file later.
 - Call `get_transcription` when the text itself is needed: to read, quote, summarize, or translate it, to make a change the user describes, or to check a file's status.

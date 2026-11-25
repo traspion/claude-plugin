@@ -10,7 +10,8 @@ The Traspion tools were first written for ChatGPT. Where a tool description or r
 Use the narrowest read-only tool that answers the request:
 
 - `get_account_status` for plan, wallet balance, and minutes. It returns a link to the Traspion billing page.
-- `get_billing_history` for payments, purchases, charges, credits, or transaction history. Ask for only as many recent records as needed, up to 100. If `hasMore` is true, say older records are in the Traspion billing dashboard.
+- `get_billing_history` for billing history, payments, purchases, credits, or where minutes went. Pick `kind` from the user's wording, without asking: `usage` for minutes used by files ("where did my minutes go"), `payments` for purchases and credits ("my payments"), `all` for plain "billing history" or anything else. Ask for only as many recent records as needed, up to 100. If `hasMore` is true, say older records are in the Traspion billing dashboard.
+- Show billing history as a table: Date, Item, Minutes, Status. Minutes are signed (+120 added, −18 used by a file); for files you may note plan or pay-as-you-go from `fromPlan` and `fromPayg`.
 - `get_spelling_replacements` for custom spelling replacement pairs.
 - `get_vocabulary` for active vocabulary entries.
 
